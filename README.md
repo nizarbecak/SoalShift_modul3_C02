@@ -315,6 +315,13 @@
    Berikut adalah SS nya.
    ![Gambar1](/images/nomor2.png)
    
+   Penjelasan
+   - Disini saya menggunakan 4 program.
+   - Programnya terdiri dari 2 Client dan 2 server.
+   - Menggunakan share memory untuk menyimpan nilai stok barang pada variabel value.
+   - Server pembeli akan mengirimkan pesan "transaksi berhasil" jika value > 0. Sebalikan akan mengirimkan "transaksi gagal" jika value tidak lebih dari 0.
+   - Thread digunakan pada server penjual untuk mengeprint stok tersisa setiap 5 detik.
+   
 ## Soal 3
 ## Soal 4
 ## Soal 5
@@ -632,3 +639,10 @@
   ![Gambar2](/images/nomor51.png)
   ![Gambar3](/images/nomor52.png)
   ![Gambar4](/images/nomor53.png)
+  
+  Penjelasan
+  - Disini saya menggunakan 2 program, yaitu program game nya sendiri, dan shop untuk menambah jumlah barang di market
+  - Menggunakan share memory untuk jumlah stok makanan di market
+  - Global variabel pada hunger, hygiene, healthmonster, bathcooldown, dan battlestatus agar mudah dipakai dalam thread yang nantinya akan mengurangi nilai hunger, hygiene, bathcooldown dan menambah nilai healthmonster pada status standby.
+  - Setiap scene nya saya menggunakan system("clear") untuk menghilangkan tulisan-tulisan sebelumnya,
+  - system ("/bin/stty raw"); c=getchar(); system ("/bin/stty cooked"); untuk menangkap input tanpa harus menekan enter.
