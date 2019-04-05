@@ -324,7 +324,7 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <sys/ipc.h>
-    #include <sys/shm.h>
+    #include <sys/shm.h> 
     #include <unistd.h>
     #include <pthread.h>
     #include<sys/types.h>
@@ -417,6 +417,12 @@
       //pthread_join(tid[2],NULL);
 
       while(1){
+        if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+        {
+          system("clear");
+          printf("Game Over");
+          break;
+        }
         system("clear");
         printf("Standby Mode\n");
         printf("Health : %d\n", monsterhealth);
@@ -435,7 +441,7 @@
         system ("/bin/stty raw");
         c=getchar();
         system ("/bin/stty cooked");
-        if(monsterhealth==0 || hygiene==0 || hunger==0)
+        if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
         {
           system("clear");
           printf("Game Over");
@@ -443,6 +449,12 @@
         }
         if (c=='1')
         {
+          if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+          {
+            system("clear");
+            printf("Game Over");
+            break;
+          }
           if (food>0)
           {
             hunger+=15;
@@ -453,6 +465,12 @@
 
         else if (c=='2')
         {
+          if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+          {
+            system("clear");
+            printf("Game Over");
+            break;
+          }
           if(bathcooldown==0)
           {
             hygiene+=30;
@@ -463,6 +481,12 @@
 
         else if (c=='3')
         {
+          if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+          {
+            system("clear");
+            printf("Game Over");
+            break;
+          }
           battlestatus=1;
           int enemyhealth;
           enemyhealth = 100;
@@ -483,12 +507,17 @@
             if (c=='1')
             {
               enemyhealth-=20;
-              if(enemyhealth==0 || monsterhealth==0)
+              if(enemyhealth<=0 || monsterhealth<=0)
               {
                 battlestatus=0;
                 break;
               }
               monsterhealth-=20;
+              if(enemyhealth<=0 || monsterhealth<=0)
+              {
+                battlestatus=0;
+                break;
+              }
               system("clear");
             }
 
@@ -502,6 +531,12 @@
 
         else if (c=='4')
         {
+          if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+          {
+            system("clear");
+            printf("Game Over");
+            break;
+          }
           while(1)
           {
             system("clear");
@@ -534,6 +569,12 @@
 
         else if (c=='5')
         {
+          if(monsterhealth<=0 || hygiene<=0 || hunger<=0)
+          {
+            system("clear");
+            printf("Game Over\n\n");
+            break;
+          }
           system("clear");
           break;
         }
