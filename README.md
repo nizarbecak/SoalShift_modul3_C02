@@ -313,6 +313,7 @@
     ```
    
    Berikut adalah SS nya.
+   ![Gambar1](/images/nomor2.png)
    
 ## Soal 3
 ## Soal 4
@@ -627,4 +628,7 @@
     }
     ```
    
-  Berikut adalah hasilnya. 
+  Berikut adalah hasilnya.
+  ![Gambar2](/images/nomor51.png)
+  ![Gambar3](/images/nomor52.png)
+  ![Gambar4](/images/nomor53.png)
