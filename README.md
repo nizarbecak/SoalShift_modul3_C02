@@ -583,6 +583,7 @@ int main()
 	return 0;
 }
    ```
+   ![Gambar7](/images/nomor4.png)
 ## Soal 5
 
    Game
